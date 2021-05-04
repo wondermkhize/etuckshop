@@ -34,6 +34,7 @@ export class ShopComponent implements OnInit {
   }
 
   getProducts(useCache = false) {
+    // tslint:disable-next-line: deprecation
     this.shopService.getProducts(useCache).subscribe(response => {
       this.products = response.data;
       this.totalCount = response.count;
@@ -43,6 +44,7 @@ export class ShopComponent implements OnInit {
   }
 
   getBrands() {
+    // tslint:disable-next-line: deprecation
     this.shopService.getBrands().subscribe(response => {
       this.brands = [{id: 0, name: 'All'}, ...response];
     }, error => {
@@ -51,6 +53,7 @@ export class ShopComponent implements OnInit {
   }
 
   getTypes() {
+    // tslint:disable-next-line: deprecation
     this.shopService.getTypes().subscribe(response => {
       this.types = [{id: 0, name: 'All'}, ...response];
     }, error => {
